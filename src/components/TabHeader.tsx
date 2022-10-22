@@ -1,15 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
 
 type ITab = {
   title: string;
   changeTab:(title: string) => any;
-  active: string;
+  active_tab: string;
 }
 
-const TabHeader = ({title, changeTab, active}: ITab) => {
+const TabHeader = ({title, changeTab, active_tab}: ITab) => {
+  const buttonRef = useRef(null)
   return (
-          <button className={`header-buttons ${title === active? 'active': ''}`}
+          <button className={`header-buttons ${title === active_tab? 'active': ''}`}
             onClick={()=>changeTab(title)}
+            ref={buttonRef}
+
           > {title}</button>
   )
 }

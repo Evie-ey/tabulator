@@ -7,10 +7,9 @@ function App() {
   return (
     <div className="tabs">
       <h1>Tabulator</h1>
-      <Tab>
+      <Tab initialActive={0}>
         <TabPane title="India" >
         <div className="tab-content">
-
              <p>Tab 1 India</p>
            </div>
         </TabPane>
