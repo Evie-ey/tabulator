@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {Tab} from './components/Tab'
 import { TabPane } from './components/TabPane';
 import './App.css';
 
 function App() {
+  const [active, setActive] = useState("Kampala")
+
   return (
     <div className="tabs">
       <h1>Tabulator</h1>

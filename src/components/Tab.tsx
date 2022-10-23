@@ -1,42 +1,47 @@
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import TabHeader from "./TabHeader";
 import { TabPaneProps } from "./TabPane";
 
 
-export type TabProps =
+
+export type TabProps = {children: React.ReactElement<TabPaneProps>[]} & (
   | {
-    children : React.ReactElement<TabPaneProps>[],
+
     initialActive: number,
     active?: never,
     onActiveChange?: never,
   }
   | {
-    children : React.ReactElement<TabPaneProps>[],
+
     active: string,
-    onActiveChange: () => any,
+    onActiveChange: (title:string) => any,
     initialActive?: never,
   }
-
+)
 
 export function Tab(props : TabProps) : JSX.Element {
-  const [active_tab, setActive] = useState("")
 
+
+  const [active_tab, setActive] = useState("")
 
   useEffect(()=> {
     if("initialActive" in props) {
-      console.log(props.children && props.children, 'children ')
-      props.initialActive &&  setActive(props.children[props.initialActive].props.title)
+      props.initialActive !== undefined ? setActive(props.children[props.initialActive].props.title):
+      setActive("");
     } else {
       setActive(props.active)
     }
+
 
   }, [props])
 
 
   function onTabChange(title:string){
-      setActive(title)
+    props.onActiveChange && props.onActiveChange(title)
+    setActive(title)
   }
+
 
   return (
   <div className="tab-wrapper">
@@ -44,10 +49,10 @@ export function Tab(props : TabProps) : JSX.Element {
     <div className="tab-header-wrapper">
 
           {props.children.map((tab_pane, index) => {
-            console.log(index, 'index')
+
             return (
               <TabHeader
-              active_tab={active_tab}
+                active_tab={active_tab}
                 title={tab_pane.props.title}
                 changeTab={onTabChange}
                 key={tab_pane.props.title}
@@ -72,3 +77,15 @@ export function Tab(props : TabProps) : JSX.Element {
 
 
 
+// function typeCheck(props:TabProps ) {
+//   if((props.initialActive && props.initialActive < 0) ||
+//     (props.initialActive && props.initialActive >= props.children.length)) {
+//       new Error(props.initialActive + " is out of bounds");
+//   }
+
+//   return null;
+// }
+
+// Tab.propTypes = {
+//   initialActive: typeCheck
+// }
