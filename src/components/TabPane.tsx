@@ -1,7 +1,7 @@
 import React from "react";
 
 export type TabPaneProps = {
-  title: 'Kampala'| 'Dublin'|'India'|'Arua',
+  title: string,
   children: any,
 
 }
@@ -14,12 +14,3 @@ export type TabPaneProps = {
 
 }
 
-export enum TabTitles {
-  Kampala = 'Kampala',
-  Dublin = 'Dublin',
-  India = 'India',
-  Kigali = 'Kigali',
-  Nairobi = 'Nairobi',
-
-
-}

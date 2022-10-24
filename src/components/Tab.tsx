@@ -1,5 +1,5 @@
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useState } from "react";
 import TabHeader from "./TabHeader";
 import { TabPaneProps } from "./TabPane";
 
@@ -17,7 +17,7 @@ export type TabProps <T extends React.ReactElement<TabPaneProps>[]> = {children:
   | {
 
 
-    active: 'Kampala'| 'Dublin'|'India'|'Arua',
+    active: string,
     onActiveChange: (title:string) => any,
     initialActive?: never,
   }
@@ -66,16 +66,13 @@ export function Tab<T extends React.ReactElement<TabPaneProps>[]>(props : TabPro
       </div>
 
           {props.children.map((tab_pane) => {
-            // return tab_pane.props.title === active_tab ? tab_pane.props.children: ""
-            if(tab_pane.props.title === active_tab) {
+
+            if(tab_pane.props.title !== active_tab) return ""
               return (
                 <div data-testid="content" key={tab_pane.props.title}>
                   {tab_pane.props.title === active_tab ? tab_pane.props.children: ""}
                 </div>
               )
-            }
-
-
 
           })}
 
