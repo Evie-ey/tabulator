@@ -1,10 +1,32 @@
-# Getting Started with Create React App
+# Tabulator
+Tabulator is a react tab component, that allows users to create tabs, 
+set the default tab either by index or based on tab title.
+The component has been developed using the react library and typescript.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+## Getting started
+The follwing instructions, will help you get a copy of the project up and running
+on your local machine.
+Assumptions: Linux machine
 
-In the project directory, you can run:
+### Pre-requisites
+* [Node](https://nodejs.org/en/download/) 
+* [Git](https://git-scm.com/)
+
+### Installation
+Clone the repo
+
+```
+$ git clone https://github.com/Evie-ey/tabulator
+$ cd tabulator
+```
+
+```shell
+$ cd tabulator
+```
+##Run the application
+### `npm install`
+This installs all the necessary dependeces required to run the application on the local machine
 
 ### `npm start`
 
@@ -17,7 +39,15 @@ You will also see any lint errors in the console.
 ### `npm test`
 
 Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The project has unit tests which test for the following
+1. The tab component renders without crashing
+2. The tab headers display correctly
+3. Passing a prop with a specific index shows the tab with content at that index.
+4. navigating from one tab pane to another works as expected
+
+
+## Other Available Scripts
+
 
 ### `npm run build`
 
@@ -27,7 +57,12 @@ It correctly bundles React in production mode and optimizes the build for the be
 The build is minified and the filenames include the hashes.\
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm run deploy`
+This works just like `npm build` .
+This  will cause the predeploy and deploy scripts defined in package.json to run.
+
+A distributable version of the react app is created and stroed in a folder called build. 
+The contents of the folder are automatically pushed to the new commit on the gh-pages branch(This branch is created automatically), if it does not exist.
 
 ### `npm run eject`
 
