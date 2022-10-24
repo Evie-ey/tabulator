@@ -24,9 +24,9 @@ $ cd tabulator
 ```shell
 $ cd tabulator
 ```
-## Run the application
+##Run the application
 ### `npm install`
-This installs all the necessary dependeces required to run the application on the local machine.
+This installs all the necessary dependeces required to run the application on the local machine
 
 ### `npm start`
 
@@ -45,10 +45,33 @@ The project has unit tests which test for the following
 3. Passing a prop with a specific index shows the tab with content at that index.
 4. navigating from one tab pane to another works as expected
 
+## Components
+
+The main components
+```
+1. # Tab component
+2. # TabPane component
+## Usage
+#Tab component
+The tab component accepts children that are of TabPane component. 
+The following props are accepted by Tab component
+1. InitialActive:number
+2. active: string and onActiveChange: function.
+One can only pass the first or second prop but not both at the same time.
+
+Passing initialActive prop
+The TabPane at that particular index(initialActive) is made active when the application first renders.
+
+Passing active: string and onActiveChange: function props
+The TabPane with {active} title is made active when the application first renders.
+
+2. TabPane
+  This component accepts children, which are content to be displayed for each tab.
+  It also accepts a prop of title.
+
+```
 
 ## Other Available Scripts
-
-
 ### `npm run build`
 
 Builds the app for production to the `build` folder.\
@@ -74,7 +97,10 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
+
+
 ## Learn More
+
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
