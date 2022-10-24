@@ -24,9 +24,9 @@ $ cd tabulator
 ```shell
 $ cd tabulator
 ```
-##Run the application
+## Run the application
 ### `npm install`
-This installs all the necessary dependeces required to run the application on the local machine
+This installs all the necessary dependeces required to run the application on the local machine.
 
 ### `npm start`
 
