@@ -12,18 +12,18 @@ function App() {
       {/* <Tab initialActive={1}> */}
       <Tab active="Dublin" onActiveChange={()=> setActive(active)}>
         <TabPane title="India" >
-        <div className="tab-content">
+        <div className="tab-content" data-id="content">
              <p>Tab 1 India</p>
            </div>
         </TabPane>
         <TabPane title='Kampala' >
-          <div className="tab-content">
+          <div className="tab-content" >
              <p>Tab is Kampla</p>
            </div>
         </TabPane>
 
         <TabPane title="Dublin">
-            <div className="tab-content">
+            <div className="tab-content" >
               <p>This is Dublin</p>
             </div>
         </TabPane>

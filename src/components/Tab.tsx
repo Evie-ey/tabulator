@@ -45,29 +45,34 @@ export function Tab<T extends React.ReactElement<TabPaneProps>[]>(props : TabPro
     setActive(title)
   }
 
-
   return (
   <div className="tab-wrapper">
-
     <div className="tab-header-wrapper">
+      {props.children.map((tab_pane, index) => {
+        return (
+          <TabHeader
+            active_tab={active_tab}
+            title={tab_pane.props.title}
+            changeTab={onTabChange}
+            key={tab_pane.props.title}
+          />
+        )
 
-          {props.children.map((tab_pane, index) => {
-
-            return (
-              <TabHeader
-                active_tab={active_tab}
-                title={tab_pane.props.title}
-                changeTab={onTabChange}
-                key={tab_pane.props.title}
-              />
-            )
-
-          })}
+      })}
 
       </div>
 
           {props.children.map((tab_pane) => {
-            return tab_pane.props.title === active_tab ? tab_pane.props.children: ""
+            // return tab_pane.props.title === active_tab ? tab_pane.props.children: ""
+            if(tab_pane.props.title === active_tab) {
+              return (
+                <div data-testid="content" key={tab_pane.props.title}>
+                  {tab_pane.props.title === active_tab ? tab_pane.props.children: ""}
+                </div>
+              )
+            }
+
+
 
           })}
 
@@ -80,15 +85,3 @@ export function Tab<T extends React.ReactElement<TabPaneProps>[]>(props : TabPro
 
 
 
-// function typeCheck(props:TabProps ) {
-//   if((props.initialActive && props.initialActive < 0) ||
-//     (props.initialActive && props.initialActive >= props.children.length)) {
-//       new Error(props.initialActive + " is out of bounds");
-//   }
-
-//   return null;
-// }
-
-// Tab.propTypes = {
-//   initialActive: typeCheck
-// }

@@ -11,6 +11,7 @@ const TabHeader = ({title, changeTab, active_tab}: ITab) => {
   return (
           <button className={`header-buttons ${title === active_tab? 'active': ''}`}
             onClick={()=>changeTab(title)}
+            data-testid={title}
 
           > {title}</button>
   )
