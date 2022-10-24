@@ -17,6 +17,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "homepage": "http://Evie-ey.github.io/tabulator",
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -41,6 +42,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^14.4.3",
     "@types/jest": "^27.5.2",
+    "gh-pages": "^4.0.0",
     "jest": "^29.2.1",
     "ts-jest": "^29.0.3",
     "typescript": "^4.8.4"
