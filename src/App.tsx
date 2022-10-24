@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import {Tab} from './components/Tab'
+import { TabPane } from './components/TabPane';
 import './App.css';
 
 function App() {
+  const [active, setActive] = useState("Kampala")
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="tabs">
+      <h1>Tabulator</h1>
+      <Tab initialActive={1}>
+      {/* <Tab active="Dublin" onActiveChange={()=> setActive(active)}> */}
+        <TabPane title="India" >
+        <div className="tab-content" data-id="content">
+             <p>Tab 1 India</p>
+           </div>
+        </TabPane>
+        <TabPane title='Kampala' >
+          <div className="tab-content" >
+             <p>Tab is Kampla</p>
+           </div>
+        </TabPane>
+
+        <TabPane title="Arua">
+            <div className="tab-content" >
+              <p>This is Arua</p>
+            </div>
+        </TabPane>
+        <TabPane title="Dublin">
+            <div className="tab-content" >
+              <p>This is Dublin</p>
+            </div>
+        </TabPane>
+      </Tab>
     </div>
   );
 }
 
 export default App;
+
