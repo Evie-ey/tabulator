@@ -68,6 +68,20 @@ The TabPane with {active} title is made active when the application first render
 2. TabPane
   This component accepts children, which are content to be displayed for each tab.
   It also accepts a prop of title.
+  
+  <Tab initialActive={1}>
+      {/* <Tab active="Dublin" onActiveChange={()=> setActive(active)}> */}
+        <TabPane title="India" >
+        <div className="tab-content">
+             <p>Tab 1 India</p>
+           </div>
+        </TabPane>
+        <TabPane title='Kampala' >
+          <div className="tab-content" >
+             <p>Tab is Kampla</p>
+           </div>
+        </TabPane>
+      </Tab>
 
 ```
 
