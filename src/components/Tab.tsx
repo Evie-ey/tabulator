@@ -4,23 +4,26 @@ import TabHeader from "./TabHeader";
 import { TabPaneProps } from "./TabPane";
 
 
+type GetIndex<T> = T extends `${infer N extends number}` ? N : never
 
-export type TabProps = {children: React.ReactElement<TabPaneProps>[]} & (
+
+export type TabProps <T extends React.ReactElement<TabPaneProps>[]> = {children: [...T]} & (
   | {
 
-    initialActive: number,
+    initialActive: GetIndex<`${number}` & keyof T>,
     active?: never,
-    onActiveChange?: never,
+    onActiveChange?: never
   }
   | {
 
-    active: string,
+
+    active: 'Kampala'| 'Dublin'|'India',
     onActiveChange: (title:string) => any,
     initialActive?: never,
   }
 )
 
-export function Tab(props : TabProps) : JSX.Element {
+export function Tab<T extends React.ReactElement<TabPaneProps>[]>(props : TabProps<T>) : JSX.Element {
 
 
   const [active_tab, setActive] = useState("")

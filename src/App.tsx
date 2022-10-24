@@ -9,7 +9,8 @@ function App() {
   return (
     <div className="tabs">
       <h1>Tabulator</h1>
-      <Tab initialActive={0}>
+      {/* <Tab initialActive={1}> */}
+      <Tab active="Dublin" onActiveChange={()=> setActive(active)}>
         <TabPane title="India" >
         <div className="tab-content">
              <p>Tab 1 India</p>
