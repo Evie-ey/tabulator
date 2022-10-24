@@ -8,12 +8,12 @@ it('Tab component matches snapshot', () => {
     <div>
       <h1>Tabulator</h1>
        <Tab initialActive={1}>
-        <TabPane title="One" >
+        <TabPane title="Kampala" >
         <div className="tab-content">
              <p>Tab 1 </p>
            </div>
         </TabPane>
-        <TabPane title='Two' >
+        <TabPane title='India' >
           <div className="tab-content">
              <p>Tab 2</p>
            </div>
@@ -31,12 +31,12 @@ it("Component will always render without crashing", () => {
     <div>
       <h1>Tabulator</h1>
        <Tab initialActive={1}>
-        <TabPane title="One" >
+        <TabPane title="Kampala" >
         <div className="tab-content">
              <p>Tab 1 </p>
            </div>
         </TabPane>
-        <TabPane title='Two' >
+        <TabPane title='India' >
           <div className="tab-content">
              <p>Tab 2</p>
            </div>
@@ -51,7 +51,7 @@ it("Component displays pane when initialActive=0", ()=> {
     <div>
       <h1>Tabulator</h1>
        <Tab initialActive={0}>
-        <TabPane title="One" >
+        <TabPane title="Kampala" >
         <div className="tab-content">
              <p>Tab 1</p>
            </div>
@@ -74,7 +74,7 @@ it("Sets initial atb using active", ()=> {
     <div>
       <h1>Tabulator</h1>
        <Tab active='India' onActiveChange={()=> ''}>
-        <TabPane title="One" >
+        <TabPane title="Kampala" >
         <div className="tab-content">
              <p>Tab 1</p>
            </div>

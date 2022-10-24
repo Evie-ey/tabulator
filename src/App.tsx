@@ -9,8 +9,8 @@ function App() {
   return (
     <div className="tabs">
       <h1>Tabulator</h1>
-      {/* <Tab initialActive={1}> */}
-      <Tab active="Dublin" onActiveChange={()=> setActive(active)}>
+      <Tab initialActive={1}>
+      {/* <Tab active="Dublin" onActiveChange={()=> setActive(active)}> */}
         <TabPane title="India" >
         <div className="tab-content" data-id="content">
              <p>Tab 1 India</p>
@@ -22,6 +22,11 @@ function App() {
            </div>
         </TabPane>
 
+        <TabPane title="Arua">
+            <div className="tab-content" >
+              <p>This is Arua</p>
+            </div>
+        </TabPane>
         <TabPane title="Dublin">
             <div className="tab-content" >
               <p>This is Dublin</p>
@@ -33,3 +38,4 @@ function App() {
 }
 
 export default App;
+

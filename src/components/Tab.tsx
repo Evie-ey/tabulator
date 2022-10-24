@@ -1,5 +1,5 @@
 
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import TabHeader from "./TabHeader";
 import { TabPaneProps } from "./TabPane";
 
@@ -17,10 +17,12 @@ export type TabProps <T extends React.ReactElement<TabPaneProps>[]> = {children:
   | {
 
 
-    active: 'Kampala'| 'Dublin'|'India',
+    active: 'Kampala'| 'Dublin'|'India'|'Arua',
     onActiveChange: (title:string) => any,
     initialActive?: never,
   }
+
+
 )
 
 export function Tab<T extends React.ReactElement<TabPaneProps>[]>(props : TabProps<T>) : JSX.Element {
@@ -43,6 +45,7 @@ export function Tab<T extends React.ReactElement<TabPaneProps>[]>(props : TabPro
   function onTabChange(title:string){
     props.onActiveChange && props.onActiveChange(title)
     setActive(title)
+
   }
 
   return (
