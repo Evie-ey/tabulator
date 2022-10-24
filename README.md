@@ -72,16 +72,16 @@ The TabPane with {active} title is made active when the application first render
   <Tab initialActive={1}>
       {/* <Tab active="Dublin" onActiveChange={()=> setActive(active)}> */}
         <TabPane title="India" >
-        <div className="tab-content">
-             <p>Tab 1 India</p>
-           </div>
-        </TabPane>
-        <TabPane title='Kampala' >
-          <div className="tab-content" >
-             <p>Tab is Kampla</p>
-           </div>
-        </TabPane>
-      </Tab>
+      <div className="tab-content">
+           <p>Tab 1 India</p>
+         </div>
+      </TabPane>
+       <TabPane title='Kampala' >
+      <div className="tab-content" >
+         <p>Tab is Kampla</p>
+       </div>
+     </TabPane>
+   </Tab>
 
 ```
 
