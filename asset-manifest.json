@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/tabulator/static/css/main.c7dc75eb.css",
-    "main.js": "/tabulator/static/js/main.1cbab967.js",
+    "main.js": "/tabulator/static/js/main.af5e5985.js",
     "static/js/787.82567987.chunk.js": "/tabulator/static/js/787.82567987.chunk.js",
     "index.html": "/tabulator/index.html",
     "main.c7dc75eb.css.map": "/tabulator/static/css/main.c7dc75eb.css.map",
-    "main.1cbab967.js.map": "/tabulator/static/js/main.1cbab967.js.map",
+    "main.af5e5985.js.map": "/tabulator/static/js/main.af5e5985.js.map",
     "787.82567987.chunk.js.map": "/tabulator/static/js/787.82567987.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c7dc75eb.css",
-    "static/js/main.1cbab967.js"
+    "static/js/main.af5e5985.js"
   ]
 }
