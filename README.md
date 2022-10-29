@@ -53,7 +53,7 @@ The main components
 2. # TabPane component
 ## Usage
 #Tab component
-The tab component accepts children that are of TabPane component. 
+The tab component accepts children that are of type TabPane component. 
 The following props are accepted by Tab component
 1. InitialActive:number
 2. active: string and onActiveChange: function.
@@ -98,7 +98,7 @@ Your app is ready to be deployed!
 This works just like `npm build` .
 This  will cause the predeploy and deploy scripts defined in package.json to run.
 
-A distributable version of the react app is created and stroed in a folder called build. 
+A distributable version of the react app is created and stored in a folder called build. 
 The contents of the folder are automatically pushed to the new commit on the gh-pages branch(This branch is created automatically), if it does not exist.
 
 ### `npm run eject`
